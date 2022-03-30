@@ -11,7 +11,7 @@ def main():
   classifier = common.classifier()
   os.chdir(os.pardir)
 
-  zip = 'Skia-' + version + '-' + system + '-' + build_type + '-' + machine + classifier + '.zip'
+  zip = 'Skia-' + version + '-' + system + '-' + build_type + '-' + machine + classifier + '_lll.zip'
   if not os.path.exists(zip):
     print('Can\'t find "' + zip + '"')
     return 1
