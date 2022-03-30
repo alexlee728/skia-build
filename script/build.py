@@ -24,12 +24,12 @@ def main():
     'skia_use_system_zlib=false',
     'skia_use_sfntly=false',
     'skia_use_freetype=true',
-    # 'skia_use_harfbuzz=true',
+    'skia_use_harfbuzz=true',
     'skia_use_system_harfbuzz=false',
     'skia_pdf_subset_harfbuzz=true',
-    # 'skia_use_icu=true',
+    'skia_use_icu=true',
     'skia_use_system_icu=false',
-    # 'skia_enable_skshaper=true',
+    'skia_enable_skshaper=true',
     # 'skia_enable_svg=true',
     'skia_enable_skottie=true'
   ]
