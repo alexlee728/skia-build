@@ -11,7 +11,7 @@ on:
       skip_release:
         description: 'Skip release related steps? (true/false)'
         required: true
-        default: 'false'
+        default: 'true'
 
 env:
   version: m93-87e8842e8c
