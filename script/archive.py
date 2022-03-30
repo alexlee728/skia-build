@@ -21,6 +21,7 @@ def main():
 
   globs = [
     'out/' + build_type + '-' + machine + '/*.a',
+    'out/' + build_type + '-' + machine + '/*.so',
     'out/' + build_type + '-' + machine + '/*.lib',
     'out/' + build_type + '-' + machine + '/icudtl.dat',
     'include/**/*',
@@ -68,7 +69,7 @@ def main():
     "third_party/icu/*.h"
   ]
 
-  target = 'Skia-' + version + '-' + system + '-' + build_type + '-' + machine + classifier + '.zip'
+  target = 'Skia-' + version + '-' + system + '-' + build_type + '-' + machine + classifier + '_lll.zip'
   print('> Writing', target)
   
   with zipfile.ZipFile(os.path.join(os.pardir, target), 'w', compression=zipfile.ZIP_DEFLATED) as zip:
