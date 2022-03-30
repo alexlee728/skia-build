@@ -33,7 +33,7 @@ def main():
     # 'skia_enable_svg=true',
     'skia_enable_skottie=true'
   ]
-
+  
   if 'macos' == system:
     args += [
       'skia_use_system_freetype2=false',
