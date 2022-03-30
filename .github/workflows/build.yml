@@ -35,7 +35,7 @@ jobs:
       - run: python3 script/archive.py --version ${{ env.version }} --build-type ${{ matrix.build_type }} --machine ${{ matrix.machine }}
       - uses: actions/upload-artifact@v2
         with:
-          name: Skia-${{ env.version }}-macos-${{ matrix.build_type }}-${{ matrix.machine }}.zip
+          name: Skia-${{ env.version }}-macos-${{ matrix.build_type }}-${{ matrix.machine }}_lll.zip
           path: '*.zip'
       - run: python3 script/release.py --version ${{ env.version }} --build-type ${{ matrix.build_type }} --machine ${{ matrix.machine }}
         if: ${{ github.event.inputs.skip_release != 'true' }}
@@ -60,7 +60,7 @@ jobs:
       - run: PATH=/usr/lib/binutils-2.26/bin:$PATH python3 script/archive.py --version ${{ env.version }} --build-type ${{ matrix.build_type }}
       - uses: actions/upload-artifact@v2
         with:
-          name: Skia-${{ env.version }}-linux-${{ matrix.build_type }}-x64.zip
+          name: Skia-${{ env.version }}-linux-${{ matrix.build_type }}-x64_lll.zip
           path: '*.zip'
       - run: python3 script/release.py --version ${{ env.version }} --build-type ${{ matrix.build_type }}
         if: ${{ github.event.inputs.skip_release != 'true' }}
@@ -83,7 +83,7 @@ jobs:
       - run: PATH=/usr/lib/binutils-2.26/bin:$PATH python3 script/archive.py --version ${{ env.version }} --classifier gcc4
       - uses: actions/upload-artifact@v2
         with:
-          name: Skia-${{ env.version }}-linux-Release-x64-gcc4.zip
+          name: Skia-${{ env.version }}-linux-Release-x64-gcc4_lll.zip
           path: '*.zip'
       - run: python3 script/release.py --version ${{ env.version }} --classifier gcc4
         if: ${{ github.event.inputs.skip_release != 'true' }}
@@ -110,7 +110,7 @@ jobs:
       - run: PATH=/usr/lib/binutils-2.26/bin:$PATH python3 script/archive.py --system android --machine ${{ matrix.machine }}
       - uses: actions/upload-artifact@v2
         with:
-          name: Skia-${{ env.version }}-android-Release-${{ matrix.machine }}.zip
+          name: Skia-${{ env.version }}-android-Release-${{ matrix.machine }}_lll.zip
           path: '*.zip'
       - run: python3 script/release.py --system android --machine ${{ matrix.machine }}
         if: ${{ github.event.inputs.skip_release != 'true' }}
@@ -140,7 +140,7 @@ jobs:
         run: python3 script/archive.py --version ${{ env.version }} --build-type ${{ matrix.build_type }}
       - uses: actions/upload-artifact@v2
         with:
-          name: Skia-${{ env.version }}-windows-${{ matrix.build_type }}-x64.zip
+          name: Skia-${{ env.version }}-windows-${{ matrix.build_type }}-x64_lll.zip
           path: '*.zip'
       - shell: bash
         run: python3 script/release.py --version ${{ env.version }} --build-type ${{ matrix.build_type }}
