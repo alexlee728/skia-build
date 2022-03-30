@@ -22,7 +22,7 @@ jobs:
     strategy:
       matrix:
         machine: ["x64", "arm64"]
-        build_type: [Release, Debug]
+        build_type: [Release]
       fail-fast: false
     steps:
       - uses: actions/checkout@v2
