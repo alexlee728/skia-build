@@ -11,7 +11,7 @@ on:
       skip_release:
         description: 'Skip release related steps? (true/false)'
         required: true
-        default: 'true'
+        default: 'false'
 
 env:
   version: m93-87e8842e8c
@@ -21,7 +21,7 @@ jobs:
     runs-on: macos-10.15
     strategy:
       matrix:
-        machine: ["x64", "arm64"]
+        machine: ["arm64"]
         build_type: [Release]
       fail-fast: false
     steps:
