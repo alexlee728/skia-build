@@ -69,7 +69,7 @@ def main():
     "third_party/icu/*.h"
   ]
 
-  target = 'Skia-' + version + '-' + system + '-' + build_type + '-' + machine + classifier + '_lll.zip'
+  target = 'Skia-' + version + '-' + system + '-' + build_type + '-' + machine + classifier + '.zip'
   print('> Writing', target)
   
   with zipfile.ZipFile(os.path.join(os.pardir, target), 'w', compression=zipfile.ZIP_DEFLATED) as zip:
